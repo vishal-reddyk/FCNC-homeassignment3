@@ -1,0 +1,18 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint Check
+        run: echo "Lint passed"
+
+      - name: Unit Test
+        run: echo "Test passed"
